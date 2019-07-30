@@ -34,3 +34,10 @@ body {
   background: image_url('memphis-mini-dark.png');
   box-shadow: 0px 1px 3px #2a2a2a;
 }
+
+.invalid-feedback {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}
