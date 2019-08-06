@@ -7,7 +7,7 @@ class Comment < ApplicationRecord
     'two stars': '2_stars',
     'three stars': '3_stars',
     'four stars': '4_stars',
-    'five_stars': '5_stars'
+    'five stars': '5_stars'
   }
 
   def humanized_rating

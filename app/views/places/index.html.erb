@@ -20,6 +20,15 @@
       </div>
     <% end %>
 
+    <% if place.photos.present? %>
+      <div class="col-12">
+        <% if place.photos.present? %>
+          <%= image_tag place.photos.last.picture.to_s, class: 'img-fluid' %><br>
+        <% end %>
+        <%= place.comments.last.message %>
+        <small><%= place.photos.last.caption %></small>
+      </div>
+    <% end %>
   </div>
 
 <% end %>
