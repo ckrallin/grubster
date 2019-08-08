@@ -46,19 +46,21 @@
           <% if place.comments.last.humanized_rating.present? %>
             <b><%= place.comments.last.humanized_rating %></b> -
           <% end %>
+          <% if place.comments.last.message.present? %>
           <%= place.comments.last.message %>
           <small><%= place.comments.last.user.email %></small>
+          <% end %>
         </blockquote>
       </div>
     <% end %>
-
+    <br><br>
     <% if place.photos.present? %>
-      <div class="col-12">
+      <div class="col-6">
         <% if place.photos.present? %>
           <%= image_tag place.photos.last.picture.to_s, class: 'img-fluid' %><br>
+          <small><%= place.photos.last.caption %></small>
         <% end %>
-        <%= place.comments.last.message %>
-        <small><%= place.photos.last.caption %></small>
+        
       </div>
     <% end %>
   </div>
